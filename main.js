@@ -131,4 +131,51 @@ daysInMonth('November', true);
 daysInMonth(3, true);
 //End of test codes
 
+function rockPaperScissors(choice) {
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+    //Error handling
+    if (choice !== 1 && choice !== 2 && choice !== 3) {
+        throw "Your input is invalid";
+    } else {
+        //Log computer choice
+        switch (randomNo) {
+            case 1:
+                console.log('Computer chose rock.')
+                break;
+            case 2:
+                console.log('Computer chose paper.')
+                break;
+            case 3: 
+                console.log('Computer chose scissors.')
+                break;
+        }
+        //Log user choice
+        switch(choice) {
+            case 1:
+                console.log('You chose rock.')
+                break;
+            case 2:
+                console.log('You chose paper.')
+                break;
+            case 3: 
+                console.log('You chose scissors.')
+                break;
+        }
+
+        //Lot result
+        switch(choice) {
+            case randomNo:
+                console.log('You are tied.')
+                break;
+            case randomNo - 1:
+            case randomNo + 2:
+                console.log('You lost!')
+                break;
+            case randomNo + 1:
+            case randomNo - 2:
+                console.log('You won!')
+            break;
+        }
+    }
+}
 
