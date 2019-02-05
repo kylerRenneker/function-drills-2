@@ -41,7 +41,7 @@ console.log(beyond(-Infinity));
 console.log(beyond(0));
 console.log(beyond(-23));
 
-//Cracking the code
+//Below done by Mengqi Wang
 
 function decode(string) {
     let arr = string.split(" ");
@@ -92,6 +92,8 @@ function daysInMonth(month, leapYear) {
             case "November":
                 console.log(`${month} has 30 days.`)
                 break;
+            default:
+                throw 'Must provide a valid month.';
         }
     }
     switch(leapYear) {
@@ -115,6 +117,8 @@ function daysInMonth(month, leapYear) {
             case "November":
                 console.log(`${month} has 30 days.`)
                 break;
+            default:
+                throw 'Must provide a valid month.';
         }
     }
 }
@@ -124,4 +128,7 @@ daysInMonth('February', true);
 daysInMonth('February', false);
 daysInMonth('March', false);
 daysInMonth('November', true);
+daysInMonth(3, true);
 //End of test codes
+
+
